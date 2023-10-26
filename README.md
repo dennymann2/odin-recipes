@@ -7,4 +7,4 @@ This project draws inspiration from **The Odin Project**, a renowned platform th
 #### Live Preview
 Experience the live version of the project here: [Odin Recipes by DennyMann2](https://dennymann2.github.io/odin-recipes/index.html)
 
-I appreciate any feedback or suggestions. Let's embark on this learning journey together!
+I appreciate any feedback or suggestions. Let's embark on this learning journey together!🤠
