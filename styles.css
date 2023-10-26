@@ -56,10 +56,25 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    pointer-events: none;  /* Ensure the tooltip doesn't interfere with hovering */
-    z-index: 1;           /* To ensure tooltip is above the image */
+    pointer-events: none;  
+    z-index: 1;         
 }
 
 .recipe-link:hover .tooltip {
     display: block;
 }
+
+.odin-link {
+    position: fixed;   
+    bottom: 10px;         
+    right: 10px;         
+    color: rgb(0, 0, 0);     
+    text-decoration: none; 
+    font-size: 0.9em;     
+    z-index: 1000;        
+}
+
+.odin-link:hover {
+    text-decoration: underline; 
+}
+
