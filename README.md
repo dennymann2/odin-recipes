@@ -1,8 +1,10 @@
-# odin-recipes
-Hello this is my first project which is supposed to be used as a test.
+# Odin Recipes Webpage
 
-It is inspired by the Odin Project and is supposed to help me get more into html and building websites.
+Welcome to the Odin Recipes project! This is my inaugural venture into web development, serving both as a practical application and a testament to my budding skills.
 
-I'm a computer science student and I want to branch out my knowledge.
+This project draws inspiration from **The Odin Project**, a renowned platform that aids aspiring developers in their journey. As a computer science student, I'm fervent about diversifying my knowledge and delving deeper into the vast realms of web development.
 
-Here is a live preview: https://dennymann2.github.io/odin-recipes/index.html
+#### Live Preview
+Experience the live version of the project here: [Odin Recipes by DennyMann2](https://dennymann2.github.io/odin-recipes/index.html)
+
+I appreciate any feedback or suggestions. Let's embark on this learning journey together!
