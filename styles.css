@@ -41,7 +41,7 @@ p {
 }
 
 .recipe-link img {
-    width: 160px; /* Adjust size as needed */
+    width: 160px;
     height: auto;
     transition: all 0.3s ease;
 }
