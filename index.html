@@ -1,55 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <main class="container">
+    <div class="container">
         <h1>Anime-Inspired Culinary Delights</h1>
         <img id="goku-eating" src='images/goku_eating.gif' alt="Goku enjoying Ramen">
-        <p>Dive into the world of anime with delectable dishes inspired by your favorite characters!</p>
+        <p>Dive deep into the world of anime with these delectable dishes inspired by your favorite characters!</p>
 
-        <section class="recipe-links">
-            <a href="recipes/luffys_meat_on_the_bone.html" class="recipe-link">
+        <div class="recipe-links">
+            <a href="recipes/luffys_meat_on_the_bone.html" class="recipe-link" title="Luffy's Meat on the Bone Recipe">
                 <img src='images/luffy_eating_meat_on_a_bone.gif' alt="Luffy's Feast">
-                <span>Luffy's Meat on the Bone Recipe</span>
             </a>
-            <a href="recipes/ponyo_ramen.html" class="recipe-link">
-                <img src='images/Ponyo_ramen.gif' alt="Ponyo's Favorite">
-                <span>Ponyo's Ramen Recipe</span>
-            </a>
-            <a href="recipes/sebastians_curry_chocolate_bun.html" class="recipe-link">
-                <img src='images/sebastians_curry_chocolate_bun.gif' alt="Sebastian's Creation">
-                <span>Sebastian's Curry Chocolate Bun</span>
-            </a>
-        </section>
-    </main>
-    <footer>
-        <a href="https://www.theodinproject.com/about" class="odin-link">Powered by the Odin Project</a>
-    </footer>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+            <a href="recipes/ponyo_ramen.html" class="recipe-link" title="Ponyo's Ramen Recipe">
+                <img src='images/Ponyo_ramen.gif' alt="Ponyo's Favorite">
+            </a>
+
+            <a href="recipes/sebastians_curry_chocolate_bun.html" class="recipe-link" title="Sebastian's Curry Chocolate Bun">
+                <img src='images/sebastians_curry_chocolate_bun.gif' alt="Sebastian's Creation">
+            </a>
+        </div>
+    </div>
+    <a href="https://www.theodinproject.com/about" class="odin-link">Powered by the Odin Project</a>
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
             });
         });
+    });
 
-        document.addEventListener("DOMContentLoaded", function() {
-            document.body.style.opacity = '1';
-        });
+    document.addEventListener("DOMContentLoaded", function() {
+        document.body.style.opacity = '1';
+        document.body.style.transition = 'opacity 2s ease-in-out';
+    });
 
-        window.addEventListener('scroll', function() {
-            const parallax = document.querySelector('body');
-            let offset = window.pageYOffset;
-            parallax.style.backgroundPositionY = offset * 0.7 + 'px';
-        });
-    </script>
+    window.addEventListener('scroll', function() {
+        const parallax = document.querySelector('body');
+        let offset = window.pageYOffset;
+        parallax.style.backgroundPositionY = offset * 0.7 + 'px';
+    });
+</script>
 </body>
 </html>

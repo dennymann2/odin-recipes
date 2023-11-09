@@ -2,6 +2,8 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -15,8 +17,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-position 0.7s;
     opacity: 0;
-    transition: opacity 2s ease-in-out, background-position 0.7s;
 }
 
 .container {
@@ -63,6 +65,7 @@ p {
 .recipe-link {
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
 .recipe-link img {
@@ -73,37 +76,21 @@ p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.recipe-link span {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 8px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;    
-}
-
 .recipe-link:hover img {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.recipe-link:hover span {
-    display: block;
 }
 
 .odin-link {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 0.9em;
     z-index: 1000;
     background-color: #5c5c5c;
+    color: #fff;
     padding: 5px 15px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -114,10 +101,6 @@ p {
 }
 
 @media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
     .recipe-links {
         flex-direction: column;
     }
@@ -125,9 +108,5 @@ p {
     .recipe-link img {
         width: 100%;
         height: auto;
-    }
-
-    h1 {
-        font-size: 2em;
     }
 }
