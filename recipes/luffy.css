@@ -1,55 +1,84 @@
 body {
     font-family: 'Trebuchet MS', sans-serif;
-    background-color: #e5cf0d;
+    background-color: #fde5b6;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
     padding: 0;
 }
 
 .card {
-    width: 600px;
+    width: 90%;
+    max-width: 600px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    padding: 20px;
-    margin: 20px;
-    max-height: 90vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    margin: 1rem;
     overflow: auto;
 }
 
 .card img {
-    max-width: 100%;
-    max-height: 30vh;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
-    margin: 20px 0;
+}
+
+.card h1, .card h4 {
+    color: #d35400; /* A color reminiscent of Luffy's outfit */
+    text-align: center;
 }
 
 .card h1 {
-    font-size: 2em;
-    border-bottom: 2px solid #FFD6D6;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    border-bottom: 2px solid #ffd6d6;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .card h4 {
-    font-size: 1.5em;
-    margin-top: 20px;
-}
-
-.card p, .card ul, .card ol {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
     text-align: left;
 }
 
-.card a {
-    color: #FFD6D6;
-    text-decoration: none;
-    display: block;
-    margin-top: 20px;
+.content-section {
+    text-align: left;
+    margin-top: 1rem;
 }
 
-.card a:hover {
+.content-section ul, .content-section ol {
+    padding-left: 1.2rem;
+}
+
+.return-link {
+    color: #0056b3;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.return-link:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .card h1 {
+        font-size: 1.5rem;
+    }
+
+    .card h4 {
+        font-size: 1.1rem;
+    }
+
+    .content-section {
+        margin-top: 0.5rem;
+    }
 }
