@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div class="container">
+    <main class="container">
         <h1>Anime-Inspired Culinary Delights</h1>
         <img id="goku-eating" src='images/goku_eating.gif' alt="Goku enjoying Ramen">
-        <p>Dive deep into the world of anime with these delectable dishes inspired by your favorite characters!</p>
+        <p>Dive into the world of anime with delectable dishes inspired by your favorite characters!</p>
 
-        <div class="recipe-links">
+        <section class="recipe-links">
             <a href="recipes/luffys_meat_on_the_bone.html" class="recipe-link">
                 <img src='images/luffy_eating_meat_on_a_bone.gif' alt="Luffy's Feast">
-                <span class="tooltip">Luffy's Meat on the Bone Recipe</span>
+                <span>Luffy's Meat on the Bone Recipe</span>
             </a>
-
             <a href="recipes/ponyo_ramen.html" class="recipe-link">
                 <img src='images/Ponyo_ramen.gif' alt="Ponyo's Favorite">
-                <span class="tooltip">Ponyo's Ramen Recipe</span>
+                <span>Ponyo's Ramen Recipe</span>
             </a>
-
             <a href="recipes/sebastians_curry_chocolate_bun.html" class="recipe-link">
                 <img src='images/sebastians_curry_chocolate_bun.gif' alt="Sebastian's Creation">
-                <span class="tooltip">Sebastian's Curry Chocolate Bun</span>
+                <span>Sebastian's Curry Chocolate Bun</span>
             </a>
-        </div>
-    </div>
-    <a href="https://www.theodinproject.com/about" class="odin-link">Powered by the Odin Project</a>
+        </section>
+    </main>
+    <footer>
+        <a href="https://www.theodinproject.com/about" class="odin-link">Powered by the Odin Project</a>
+    </footer>
 
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -44,7 +43,6 @@
 
         document.addEventListener("DOMContentLoaded", function() {
             document.body.style.opacity = '1';
-            document.body.style.transition = 'opacity 2s ease-in-out';
         });
 
         window.addEventListener('scroll', function() {
