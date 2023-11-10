@@ -110,3 +110,24 @@ p {
         height: auto;
     }
 }
+
+@keyframes fall {
+    0% { transform: translateY(-10vh); }
+    100% { transform: translateY(100vh); }
+  }
+  
+  .raindrop {
+    position: absolute;
+    background: #9ec5e5; /* Light blue color for raindrops */
+    width: 2px; /* Raindrop width */
+    height: 10px; /* Raindrop height */
+    opacity: 0.5; /* Slightly see-through */
+    top: -10vh; /* Start off-screen */
+    animation: fall linear 1s infinite; /* Adjust time as necessary */
+  }
+  
+  /* Optional: add a slight delay for each drop so they don't all fall at once */
+  .raindrop:nth-child(odd) { animation-delay: -0.5s; }
+  .raindrop:nth-child(even) { animation-delay: -0.25s; }
+  
+  
