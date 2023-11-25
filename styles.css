@@ -1,133 +1,121 @@
-*,
-*::before,
-*::after {
+/* Global Styles */
+*, *::before, *::after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* A light background color */
     color: #333;
-    line-height: 1.6;
-    padding-top: 50px;
-    background-image: url('./images/food_background.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: background-position 0.7s;
-    opacity: 0;
 }
 
-.container {
+/* Header and Navigation Bar */
+header {
+    background-color: #333; /* Dark color for contrast */
+    color: white;
+    padding: 10px 0;
     text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
 }
 
-h1 {
-    font-size: 3em;
-    color: #5c5c5c;
-    margin-bottom: 20px;
-    font-weight: 300;
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-#goku-eating {
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+.main-nav li {
+    display: inline;
+    margin: 0 15px;
 }
 
-p {
-    margin-bottom: 50px;
-    color: #666;
+.main-nav a {
+    color: white;
+    text-decoration: none;
     font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #ff6347; /* Highlight color on hover */
+}
+
+/* Main Content Area */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.featured {
+    text-align: center;
+}
+
+.featured img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.recipe-highlights {
+    margin-top: 30px;
 }
 
 .recipe-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin-bottom: 50px;
 }
 
 .recipe-link {
-    position: relative;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     overflow: hidden;
-    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.recipe-link:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .recipe-link img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
 }
 
 .recipe-link:hover img {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.odin-link {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 0.9em;
-    z-index: 1000;
-    background-color: #5c5c5c;
-    color: #fff;
-    padding: 5px 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #333;
+    color: white;
 }
 
-.odin-link:hover {
-    background-color: #444;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-    .recipe-links {
+    .main-nav ul {
         flex-direction: column;
+        margin-top: 10px;
     }
 
-    .recipe-link img {
-        width: 100%;
-        height: auto;
+    .main-nav li {
+        margin-bottom: 10px;
+    }
+
+    .recipe-links {
+        grid-template-columns: 1fr;
     }
 }
-
-@keyframes fall {
-    0% { transform: translateY(-10vh); }
-    100% { transform: translateY(100vh); }
-  }
-  
-  .raindrop {
-    position: absolute;
-    background: #9ec5e5; /* Light blue color for raindrops */
-    width: 2px; /* Raindrop width */
-    height: 10px; /* Raindrop height */
-    opacity: 0.5; /* Slightly see-through */
-    top: -10vh; /* Start off-screen */
-    animation: fall linear 1s infinite; /* Adjust time as necessary */
-  }
-  
-  /* Optional: add a slight delay for each drop so they don't all fall at once */
-  .raindrop:nth-child(odd) { animation-delay: -0.5s; }
-  .raindrop:nth-child(even) { animation-delay: -0.25s; }
-  
-  

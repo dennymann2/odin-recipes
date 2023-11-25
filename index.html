@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Anime-Inspired Culinary Delights</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <style>
+    body {
+      background-image: url('/images/food_background.jpg');
+    }
+</style>
 </head>
-
 <body>
-    <div class="container">
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
         <h1>Anime-Inspired Culinary Delights</h1>
-        <img id="goku-eating" src='images/goku_eating.gif' alt="Goku enjoying Ramen">
-        <p>Dive deep into the world of anime with these delectable dishes inspired by your favorite characters!</p>
+    </header>
 
-        <div class="recipe-links">
-            <a href="recipes/luffys_meat_on_the_bone.html" class="recipe-link" title="Luffy's Meat on the Bone Recipe">
-                <img src='images/luffy_eating_meat_on_a_bone.gif' alt="Luffy's Feast">
-            </a>
+    <div class="container">
+        <section class="featured">
+            <img id="goku-eating" src='images/goku_eating.gif' alt="Goku enjoying Ramen">
+            <p>Dive deep into the world of anime with these delectable dishes inspired by your favorite characters!</p>
+        </section>
 
-            <a href="recipes/ponyo_ramen.html" class="recipe-link" title="Ponyo's Ramen Recipe">
-                <img src='images/Ponyo_ramen.gif' alt="Ponyo's Favorite">
-            </a>
-
-            <a href="recipes/sebastians_curry_chocolate_bun.html" class="recipe-link" title="Sebastian's Curry Chocolate Bun">
-                <img src='images/sebastians_curry_chocolate_bun.gif' alt="Sebastian's Creation">
-            </a>
-        </div>
+        <section class="recipe-highlights">
+            <h2>Featured Recipes</h2>
+            <div class="recipe-links">
+                <a href="recipes/luffys_meat_on_the_bone.html" class="recipe-link" title="Luffy's Meat on the Bone">
+                    <img src='images/luffy_eating_meat_on_a_bone.gif' alt="Luffy's Feast">
+                </a>
+                <a href="recipes/ponyo_ramen.html" class="recipe-link" title="Ponyo's Ramen">
+                    <img src='images/Ponyo_ramen.gif' alt="Ponyo's Favorite">
+                </a>
+                <a href="recipes/sebastians_curry_chocolate_bun.html" class="recipe-link" title="Sebastian's Curry Chocolate Bun">
+                    <img src='images/sebastians_curry_chocolate_bun.gif' alt="Sebastian's Creation">
+                </a>    
+            </div>
+        </section>
     </div>
-    <a href="https://www.theodinproject.com/about" class="odin-link">Powered by the Odin Project</a>
 
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+    <footer>
+        <p>Powered by the Odin Project</p>
+    </footer>
 
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    document.addEventListener("DOMContentLoaded", function() {
-        document.body.style.opacity = '1';
-        document.body.style.transition = 'opacity 2s ease-in-out';
-    });
-
-    window.addEventListener('scroll', function() {
-        const parallax = document.querySelector('body');
-        let offset = window.pageYOffset;
-        parallax.style.backgroundPositionY = offset * 0.7 + 'px';
-    });
-</script>
-<script src="rain.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
