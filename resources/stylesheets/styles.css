@@ -18,39 +18,25 @@ body {
 header {
     text-align: center;
     padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .title {
     font-family: 'Roboto', sans-serif;
-    color: pink;
-    background-color: cornflowerblue;
-    display: inline-block;
+    color: #ff007f;
+    background-color: transparent;
     padding: 5px;
     font-size: 2em;
-    position: relative; /* Important for positioning the sparkles */
-}
-
-/* Sparkles around the title */
-.title::before,
-.title::after {
-    content: "✨";
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    animation: sparkleAnimation 1s ease-in-out infinite alternate;
-}
-
-.title::before { left: -35px; }
-.title::after { right: -35px; }
-
-/* Sparkle animation */
-@keyframes sparkleAnimation {
-    from { opacity: 0; transform: translate(-50%, -50%) scale(0.6); }
-    to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    animation: none; /* Important for positioning the sparkles */
 }
 
 /* Main Navigation Styling */
 .main-nav {
+    display: none;
     height: 100vh;
     background-color: #333;
     width: 250px;
@@ -118,6 +104,13 @@ header {
     border-radius: 8px;
 }
 
+@media (max-width: 768px) {
+    .featured img {
+    width: 100%;
+    height: auto;
+    }
+}
+
 .recipe-highlights {
     margin-top: 30px;
 }
@@ -178,4 +171,11 @@ footer {
         height: auto;
         right: 0;
         opacity: 1;
+    }
+    
+    @media (max-width: 768px) {
+        .main-nav {
+        width: 100%;
+        position: static;
+        }
     }
