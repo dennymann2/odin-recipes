@@ -18,7 +18,7 @@ body {
 header {
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -31,7 +31,8 @@ header {
     background-color: transparent;
     padding: 5px;
     font-size: 2em;
-    animation: none; /* Important for positioning the sparkles */
+    animation: none;
+    position: static;
 }
 
 /* Main Navigation Styling */
@@ -42,10 +43,10 @@ header {
     width: 250px;
     position: fixed;
     top: 0;
-    right: -250px;
-    transition: right 0.3s, opacity 0.3s;
-    padding-top: 60px;
+    right: 0;
+    transform: translateX(100%);
     opacity: 0;
+    display: block;
 }
 
 .main-nav ul {
