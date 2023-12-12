@@ -2,13 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Toggle navigation menu
     document.querySelector('.menu-icon').addEventListener('click', function() {
         var nav = document.querySelector('.main-nav');
-        if (nav.style.transform === 'translateX(0%)') {
-            nav.style.transform = 'translateX(100%)';
-            nav.style.opacity = '0';
-        } else {
-            nav.style.transform = 'translateX(0%)';
-            nav.style.opacity = '1';
-        }
+        nav.classList.toggle('is-active'); // Toggles the 'is-active' class on the '.main-nav'
     });
 
     // Smooth scrolling for anchor links
