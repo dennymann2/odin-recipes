@@ -1,0 +1,1 @@
+This simple projeect will be a basic striped down recipe website just for testing.
