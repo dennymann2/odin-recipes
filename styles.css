@@ -1,0 +1,13 @@
+
+.welcome {
+    font-size: 30px;
+    font-weight: 700;
+    background-color: blueviolet;
+    text-align: center;
+}
+
+.hot {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+}
